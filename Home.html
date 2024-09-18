@@ -1,0 +1,47 @@
+<!-- 
+    Description: 
+    This is the main page. 
+    It contains the title, menu button, and side menu alowing navigation 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=Devicewidth, initial-scale=1.0">
+        <title>Project</title>
+        <link rel="stylesheet" href="Home_style.css">
+        <link rel="shortcut icon" href="Fuego-Title.png" type="image/x-icon">
+    </head>
+    <body>
+        <!-- Make Title -->
+        <div id="Title" class="title">
+            <p>FUEGO</p>
+        </div>
+
+        <!-- Adds menu button -->
+        <button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
+
+        <!-- Creates contents of side menu -->
+        <div id="mySidenav" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="Home.html">Home</a>
+            <a href="Menu.php">Menu</a>
+            <a href="Account.php">Account</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    <script>
+        
+        <!-- script for opening and closeing side menu -->
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "25vw";
+            document.getElementById("main").style.marginLeft = "25vw";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0vw";
+            document.getElementById("main").style.marginLeft= "0vw";
+        }
+    </script>
+
+    </body>
+</html>

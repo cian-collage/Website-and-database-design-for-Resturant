@@ -1,0 +1,83 @@
+<!-- 
+    Description: 
+    This is the contact page for the restraunt . It displays contact information including 
+    addresses, phone numbers, and email addresses.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=Devicewidth, initial-scale=1.0">
+        <title>Project</title>
+        <link rel="stylesheet" href="Contact_Style.css">
+        <link rel="shortcut icon" href="Fuego-Title.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <!-- Adds menu button -->
+        <button id="openbtn" class="openbtn" onclick="openNav()">☰</button>
+
+        <!-- Creates contents of side menu -->
+        <div id="mySidenav" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="Home.html">Home</a>
+            <a href="Menu.php">Menu</a>
+            <a href="Account.php">Account</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+
+        <!-- Create Info box -->
+        <div class="contact-info">
+            <!-- create title -->
+            <h1>Contact Info</h1>
+            <!-- create 3 columns address, phone and email-->
+            <div class="info">
+                <!-- Fill address -->
+                <div class="address">
+                    <h3>Addresses</h3>
+                    <p>123 Elegant Avenue</p>
+                    <p>Cityville, State 12345</p>
+            
+                    <br>
+                    <p>456 Fancy Street</p>
+                    <p>Townsville, State 67890</p>
+            
+                    <br>
+                    <p>101 Chic Boulevard</p>
+                    <p>Metropolis, State 24680</p>
+                </div>
+
+                <!-- Fill phone -->
+                <div class="phone">
+                    <h3>Phone</h3>
+                    <p>Main: (123) 456-7890</p>
+                    <p>Reservations: (123) 456-1234</p>
+                </div>
+
+                <!-- Fill email -->
+                <div class="email">
+                    <h3>Email</h3>
+                    <p>General Inquiries: info@elegantdining.com</p>
+                    <p>Reservations: reservations@elegantdining.com</p>
+                    <p>Private Events: events@elegantdining.com</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    <script>
+        <!-- script for opening and closeing side menu -->
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "25vw";
+            document.getElementById("main").style.marginLeft = "25vw";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0vw";
+            document.getElementById("main").style.marginLeft= "0vw";
+        }
+    </script>
+
+    </body>
+
+</html>

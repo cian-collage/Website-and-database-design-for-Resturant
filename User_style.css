@@ -1,0 +1,256 @@
+/*The background img */
+body {
+  background-image: url(Menu_Back.png);
+  background-size:  cover ;
+}
+
+/* Navigation bar styles */
+.topnav {
+  overflow: hidden;
+  text-align: center; 
+  width: 80vw;
+  height: 8vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
+  border-bottom: 2px solid #333; 
+  background-color: #e97232d8;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Navigation bar text styles */
+.topnav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1%;
+  border-radius: 5%; 
+  margin: 0 2%;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: padding 0.3s;
+}
+
+/* Navigation bar Hover styles */
+.topnav a:hover {
+  background-color: #793b1b;
+  color: rgb(255, 255, 255);
+  padding: 0.5%; 
+}
+
+/* Navigation bar not Hover styles (prevents warping)*/
+.topnav a:not(:hover) {
+  padding: 0.5%; 
+}
+
+/* Common styles for menu and reservations sections */
+.menu, .reservations {
+  position: absolute;
+  top: calc(8vh + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: calc(90vh - 10px);
+  overflow: visible;
+}
+
+/* Hide certain elements by default */
+.reservations{
+  display: none;
+}
+
+/* Styles for tables in menu and reservations sections */
+.menu table, .reservations table {
+  width: 70vw;
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow: scroll;
+}
+
+/* Styles for table cells in menu and reservations sections */
+.menu td, .reservations td {
+  border: 1px solid #ffffff;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  width: 20%;
+  color: #ffffff;
+  background-color: #0000008e;
+  text-align: center;
+  font-size: 1vw;
+}
+
+/* Styles for table headers in menu and reservations sections */
+.menu th, .reservations th {
+  color: #E97132;
+  border: none;
+  text-align: center;
+  font-size: 2vw;
+  background-color: none;
+}
+
+/* Styles for reservation-add section */
+.reservation-add {
+  position: absolute;
+  top: calc(8vh + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  color: #E97132;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+/* Styles for reservation-add section text*/
+.reservation-add h2 {
+  color: #E97132; 
+}
+
+/* Styles for reservation-add section form */
+.reservation-add form {
+  margin-top: 20px;
+}
+
+/* Styles for reservation-add section lables*/
+.reservation-add label {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff; 
+}
+/* Styles for reservation-add section Input boxeds*/
+.reservation-add input[type="date"],.reservation-add input[type="time"],.reservation-add input[type="number"],.reservation-add textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  color: #ffffff; 
+  background-color: #353535;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styles for reservation-add section textarea*/
+.reservation-add textarea {
+  height: 100px;
+}
+
+/* Styles for reservation-add submit button */
+.reservation-add input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Styles for reservation-add submit button hover */
+.reservation-add input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/*The sidebar or pop-up menu */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.589);
+  overflow-x: hidden;
+  transition: width 0.5s; 
+  padding-top: 60px;
+}
+/*The Main Logo/Title <a> */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  margin-top: 10%;
+  text-decoration: none;
+  font-size: 4vw;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/*The Main Logo/Title <a> when the mouse hovers over*/
+.sidebar a:hover {
+  color: #ffffff;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/*the open button used to open the sidebar*/
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/*the open button used to open the sidebars hover effect*/
+.openbtn:hover {
+  background-color: #444;
+}
+
+/*the close button used to close the sidebar*/
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*changes sidebar size when screen changes*/
+@media screen and (max-height: 450px) {
+  .sidebar { padding-top: 15px; }
+  .sidebar a { font-size: 18px; }
+}
+
+
+/*Animation glow effect used in sidebar and Title*/
+@keyframes glow {
+  from {
+    text-shadow: 
+    0 0 8px rgba(255, 187, 0, 0.5),
+    0 0 8px rgba(255, 187, 0, 0.5),
+      0 0 15px rgba(255, 102, 0, 0.5),
+      0 0 25px rgba(255, 102, 0, 0.5),
+      0 0 35px rgba(255, 51, 0, 0.5), 
+      0 0 45px rgba(255, 51, 0, 0.5), 
+      0 0 55px rgba(204, 0, 0, 0.5); 
+  }
+  to {
+    text-shadow: 
+    0 0 20px rgba(255, 187, 0, 0.5),
+      0 0 30px rgba(255, 153, 0, 0.5), 
+      0 0 40px rgba(255, 102, 0, 0.5),
+      0 0 50px rgba(255, 102, 0, 0.5), 
+      0 0 60px rgba(255, 51, 0, 0.5),
+      0 0 70px rgba(255, 51, 0, 0.5), 
+      0 0 80px rgba(204, 0, 0, 0.5); 
+  }
+}
+
+
